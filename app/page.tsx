@@ -1,3 +1,4 @@
+import { CardWithForm } from "@/components/form-list";
 import Image from "next/image";
 
 export default function Home() {
@@ -49,6 +50,9 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+        <div>
+          <CardWithForm />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
