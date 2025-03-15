@@ -2,17 +2,9 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
   Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
   Cog,
+  UserRound
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -28,7 +20,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-    SidebarMenuSubButton,
+  SidebarMenuSubButton,
 } from "@/components/ui/sidebar"
 
 // This is sample data.
@@ -36,7 +28,7 @@ const data = {
   user: {
     name: "shadcn",
     email: "maaas@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "/images/bird.jpg",
   },
   navMain: [
     {
@@ -62,19 +54,19 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
-      url: "/login",
+      name: "Admin users",
+      url: "/admins/",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
+      name: "RiceSource users",
+      url: "/users/",
+      icon: UserRound,
     },
     {
-      name: "Travel",
-      url: "#",
-      icon: Map,
+      name: "Config",
+      url: "/configs/",
+      icon: Cog,
     },
   ],
 }

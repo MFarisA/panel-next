@@ -40,7 +40,6 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
-  const picture ='https://static.wikia.nocookie.net/aesthetics/images/a/a3/Pure_blue.png/revision/latest?cb=20210323184329'
 
   return (
     <SidebarMenu>
@@ -52,7 +51,7 @@ export function NavUser({
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage src={picture} alt={user.name} />
+                <AvatarImage src='/images/bird.jpg' alt={user.name} />
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
