@@ -2,9 +2,10 @@
 
 import * as React from "react"
 import {
-  Frame,
+  Settings,
   Cog,
-  UserRound
+  UserRound,
+  ShieldUser
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -56,7 +57,7 @@ const data = {
     {
       name: "Admin users",
       url: "/admins/",
-      icon: Frame,
+      icon: ShieldUser,
     },
     {
       name: "RiceSource users",
@@ -67,6 +68,11 @@ const data = {
       name: "Config",
       url: "/configs/",
       icon: Cog,
+    },
+    {
+      name: "Setting",
+      url: "/settings/",
+      icon: Settings,
     },
   ],
 }
