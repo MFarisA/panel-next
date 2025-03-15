@@ -12,6 +12,7 @@ import {
   PieChart,
   Settings2,
   SquareTerminal,
+  Cog,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -24,6 +25,10 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+    SidebarMenuSubButton,
 } from "@/components/ui/sidebar"
 
 // This is sample data.
@@ -33,28 +38,11 @@ const data = {
     email: "maaas@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
-      title: "Playground",
+      title: "Playgrounddd",
       url: "#",
-      icon: SquareTerminal,
+      icon: Cog,
       isActive: true,
       items: [
         {
@@ -71,76 +59,11 @@ const data = {
         },
       ],
     },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
   ],
   projects: [
     {
       name: "Design Engineering",
-      url: "#",
+      url: "/login",
       icon: Frame,
     },
     {
@@ -160,7 +83,22 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        {/* <TeamSwitcher teams={data.teams} /> */}
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <a href="#">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-red-300 text-sidebar-primary-foreground">
+                  {/* <GalleryVerticalEnd className="size-4" /> */}
+                  <img src="/Group.svg" className="size-6" alt="" />
+                </div>
+                <div className="flex flex-col gap-0.5 leading-none">
+                  <span className="font-semibold">Documentation</span>
+                  <span className="">v1.0.0</span>
+                </div>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
