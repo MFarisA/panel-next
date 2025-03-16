@@ -1,5 +1,9 @@
 'use client'
-import { AdminDataTable } from "@/components/admin-table";
+// import { AdminDataTable } from "@/components/admin-table";
+import { DataTable } from "@/components/data-table/data-table"
+import { columns } from "@/components/data-table/columns"
+import { users } from "@/data/users"
+
 import React from "react";
 
 export default function AdminPage() {
@@ -10,7 +14,8 @@ export default function AdminPage() {
                 <div className="aspect-video rounded-xl bg-blue-100" />
                 <div className="aspect-video rounded-xl bg-blue-100" />
             </div>
-            <AdminDataTable />
+            {/* <AdminDataTable /> */}
+            <DataTable columns={columns} data={users} />
         </div>
     )
 }
