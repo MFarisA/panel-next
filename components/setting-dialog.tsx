@@ -1,5 +1,10 @@
 "use client"
 
+import SettingsPage from "@/components/adminSettings/settings-page"
+import ProfilePage from "@/components/adminSettings/profile-page"
+import PasswordPage from "@/components/adminSettings/password-page"
+import AppearancePage from "@/components/adminSettings/appearance-page"
+
 import * as React from "react"
 import {
     Home,
@@ -27,23 +32,6 @@ const data = {
         { name: "Password", icon: Home },
         { name: "Appearance", icon: SunMoon },
     ],
-}
-
-// Komponen untuk setiap halaman
-function SettingsPage() {
-    return <div className="p-4">⚙️ This is the Settings page</div>
-}
-
-function ProfilePage() {
-    return <div className="p-4">👤 This is the Profile page</div>
-}
-
-function PasswordPage() {
-    return <div className="p-4">🔑 This is the Password page</div>
-}
-
-function AppearancePage() {
-    return <div className="p-4">🎨 This is the Appearance page</div>
 }
 
 export function SettingsDialog({
