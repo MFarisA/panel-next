@@ -100,8 +100,6 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <SettingsDialog open={openDialog} onOpenChange={setOpenDialog} />
-
-
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogOut />
