@@ -75,11 +75,11 @@ const data = {
       url: "/configs/",
       icon: Cog,
     },
-    {
-      name: "Setting",
-      url: "/settings/",
-      icon: Settings,
-    },
+    // {
+    //   name: "Setting",
+    //   url: "/settings/",
+    //   icon: Settings,
+    // },
   ],
 }
 

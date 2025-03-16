@@ -1,4 +1,6 @@
 "use client"
+import React from "react"
+
 
 import {
   BadgeCheck,
@@ -27,6 +29,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { SettingsDialog } from "./setting-dialog"
 
 export function NavUser({
   user,
@@ -38,6 +41,7 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
+  const [openDialog, setOpenDialog] = React.useState(false);
 
   return (
     <SidebarMenu>
@@ -78,16 +82,26 @@ export function NavUser({
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
+
             <DropdownMenuGroup>
-              <DropdownMenuItem>
+              <DropdownMenuItem
+                onSelect={(e) => {
+                  e.preventDefault(); // Supaya dropdown tidak auto close
+                  setOpenDialog(true); // Open dialog manual
+                }}
+              >
                 <BadgeCheck />
-                Account
+                Account Settings
               </DropdownMenuItem>
+
               <DropdownMenuItem>
                 <Bell />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
+            <SettingsDialog open={openDialog} onOpenChange={setOpenDialog} />
+
+
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogOut />
