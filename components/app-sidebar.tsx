@@ -5,7 +5,8 @@ import {
   Settings,
   Cog,
   UserRound,
-  ShieldUser
+  ShieldUser,
+  LayoutDashboard,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -54,6 +55,11 @@ const data = {
     },
   ],
   projects: [
+    {
+      name: "Dashboard",
+      url: "/",
+      icon: LayoutDashboard,
+    },
     {
       name: "Admin users",
       url: "/admins/",
