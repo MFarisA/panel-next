@@ -44,21 +44,23 @@ export function NavProjects({
       <SidebarGroupLabel>Projects</SidebarGroupLabel>
       <SidebarMenu>
         {projects.map((item) => {
-          const isActive = pathname === item.url
+          const isActive = pathname === item.url || pathname.startsWith(item.url + "/")
           return (
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton
                 asChild
                 className={`
-                  ${isActive ? "bg-green-900 text-white" : ""}
-                  hover:bg-green-900 transition-colors
-                `}
+    ${isActive ? "bg-green-900 text-white" : ""}
+    hover:bg-green-900 hover:text-white
+    transition-colors
+  `}
               >
                 <Link href={item.url}>
                   <item.icon />
                   <span>{item.name}</span>
                 </Link>
               </SidebarMenuButton>
+
 
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
