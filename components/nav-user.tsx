@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import Link from 'next/link';
 
 
 import {
@@ -29,7 +30,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { SettingsDialog } from "./setting-dialog"
+// import { SettingsDialog } from "./setting-dialog"
 
 export function NavUser({
   user,
@@ -84,6 +85,8 @@ export function NavUser({
             <DropdownMenuSeparator />
 
             <DropdownMenuGroup>
+
+              <Link href='/settings'>
               <DropdownMenuItem
                 onSelect={(e) => {
                   e.preventDefault(); // Supaya dropdown tidak auto close
@@ -93,13 +96,14 @@ export function NavUser({
                 <BadgeCheck />
                 Account Settings
               </DropdownMenuItem>
+              </Link>
 
               <DropdownMenuItem>
                 <Bell />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
-            <SettingsDialog open={openDialog} onOpenChange={setOpenDialog} />
+            {/* <SettingsDialog open={openDialog} onOpenChange={setOpenDialog} /> */}
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogOut />
