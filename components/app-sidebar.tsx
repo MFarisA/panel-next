@@ -62,24 +62,19 @@ const data = {
     },
     {
       name: "Admin users",
-      url: "/admins/",
+      url: "/admins",
       icon: ShieldUser,
     },
     {
       name: "RiceSource users",
-      url: "/users/",
+      url: "/users",
       icon: UserRound,
     },
     {
       name: "Config",
-      url: "/configs/",
+      url: "/configs",
       icon: Cog,
     },
-    // {
-    //   name: "Setting",
-    //   url: "/settings/",
-    //   icon: Settings,
-    // },
   ],
 }
 
@@ -91,13 +86,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-red-300 text-sidebar-primary-foreground">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-green-900 text-sidebar-primary-foreground">
                   {/* <GalleryVerticalEnd className="size-4" /> */}
                   <img src="/Group.svg" className="size-6" alt="" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">Documentation</span>
-                  <span className="">v1.0.0</span>
+                  <span className="font-semibold">RiceSource</span>
+                  <span className="">Admin</span>
                 </div>
               </a>
             </SidebarMenuButton>
